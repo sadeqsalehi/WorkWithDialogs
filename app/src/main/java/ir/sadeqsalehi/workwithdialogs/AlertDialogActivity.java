@@ -1,6 +1,8 @@
 package ir.sadeqsalehi.workwithdialogs;
 
+import android.app.Dialog;
 import android.content.DialogInterface;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -105,4 +107,10 @@ public class AlertDialogActivity extends AppCompatActivity {
         return result;
     }
 
+    public void showCustomAlertDialogOnClick(View view) {
+        Dialog dialog = new Dialog(this);
+
+        dialog.setContentView(R.layout.simple_layout_dialog);
+        dialog.show();
+    }
 }
